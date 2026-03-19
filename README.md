@@ -116,4 +116,5 @@ Specializing in intelligent automation, LLMs, and scalable data pipelines.
 
 ## License
 
-MIT License — free to use, modify, and distribute.
+© 2025 Vaibhav Panda. All Rights Reserved.
+This project and its contents may not be used, copied, or distributed without explicit permission from the author.
