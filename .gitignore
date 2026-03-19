@@ -1,0 +1,24 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+slprj/
+*.slxc
+
+# Data (too large for GitHub)
+data/raw/coco/val2017/
+data/raw/coco/annotations/
+data/raw/MOT17/
+data/raw/*.mp4
+data/processed/
+
+# Results (keep dashboard, ignore large files)
+results/*.mp4
+results/*.avi
+results/week2_results.mat
+results/week3_metrics.mat
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
