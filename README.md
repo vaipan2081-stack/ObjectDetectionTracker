@@ -50,6 +50,46 @@ Detecting objects is easy. The hard part is knowing whether the person in frame 
 
 ---
 
+## Quick Start
+
+### Step 1 — Check your environment
+```matlab
+checkToolboxes
+```
+You need: Deep Learning Toolbox, Computer Vision Toolbox, Image Processing Toolbox, Statistics & ML Toolbox.
+
+### Step 2 — Download COCO val2017 dataset
+- Images (1 GB): http://images.cocodataset.org/zips/val2017.zip
+- Annotations (241 MB): http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+
+Extract into:
+```
+data/raw/coco/
+  val2017/
+  annotations/
+    instances_val2017.json
+```
+
+### Step 3 — Run Week 1: Data loading & visualization
+```matlab
+main_week1
+```
+Expected output: grid of 20 annotated sample frames + class distribution chart.
+
+### Step 4 — Run Week 2: Detection + tracking
+```matlab
+main_week2
+```
+Expected output: live detection window with bounding boxes and track IDs + FPS chart.
+
+### Step 5 — Run Week 3: Evaluation + dashboard
+```matlab
+main_week3
+```
+Expected output: PR curves, AP bar chart, FPS distribution, and 6-panel dashboard saved to `results/dashboard.png`.
+
+---
+
 ## Architecture
 
 ```
@@ -68,7 +108,7 @@ ObjectDetectionTracker/
     evaluator.m         ← mAP, precision/recall, ID switch rate
     visualizer.m        ← Draw boxes, labels, FPS overlay
   data/
-    raw/coco/           ← Put COCO dataset here
+    raw/coco/           ← Put COCO dataset here (not included)
   results/
     dashboard.png       ← Auto-generated performance dashboard
     tracked_output.mp4  ← Annotated output video
@@ -89,6 +129,11 @@ ObjectDetectionTracker/
 
 ## GPU Acceleration
 
+To enable GPU, set in `config.m`:
+```matlab
+cfg.useGPU = true;
+```
+
 | Mode | Avg FPS | Per Frame |
 |------|---------|-----------|
 | CPU | 2.3 FPS | ~0.43s |
@@ -106,7 +151,7 @@ Tracked classes: `person`, `car`, `bicycle`, `motorbike`, `bus`, `truck`
 
 ## Author
 
-**Vaibhav Panda** — Data Engineer & AI Developer  
+**Vaibhav Panda** — Data Engineer & AI Developer
 Specializing in intelligent automation, LLMs, and scalable data pipelines.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav_Panda-blue?logo=linkedin)](https://www.linkedin.com/in/vaibhavpanda/)
