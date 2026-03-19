@@ -116,5 +116,5 @@ Specializing in intelligent automation, LLMs, and scalable data pipelines.
 
 ## License
 
-© 2025 Vaibhav Panda. All Rights Reserved.
+© 2026 Vaibhav Panda. All Rights Reserved.
 This project and its contents may not be used, copied, or distributed without explicit permission from the author.
