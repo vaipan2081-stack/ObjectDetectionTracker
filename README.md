@@ -1,7 +1,7 @@
 # Real-Time Object Detection & Multi-Object Tracking
 ### Built in MATLAB | YOLOv2 + Kalman Filter + Hungarian Algorithm | COCO Dataset
 
-![Dashboard](results/dashboard.png)
+![Dashboard](dashboard.png)
 
 ---
 
@@ -35,6 +35,18 @@ Detecting objects is easy. The hard part is knowing whether the person in frame 
 
 - **Kalman Filter** — predicts where each object will be in the *next* frame before it is even detected. Like a goalkeeper who dives before the ball is kicked.
 - **Hungarian Algorithm** — mathematically solves the assignment problem of matching predictions to new detections at minimum cost. Every object gets a unique ID that survives across frames.
+
+---
+
+## Precision-Recall Curves
+
+![PR Curves](pr_curves.png)
+
+---
+
+## Per-Class Average Precision
+
+![AP per Class](ap_per_class.png)
 
 ---
 
@@ -75,64 +87,7 @@ ObjectDetectionTracker/
 
 ---
 
-## Quick Start
-
-### 1. Check your environment
-```matlab
-checkToolboxes
-```
-
-### 2. Download COCO val2017 dataset
-- Images: http://images.cocodataset.org/zips/val2017.zip
-- Annotations: http://images.cocodataset.org/annotations/annotations_trainval2017.zip
-
-Extract into:
-```
-data/raw/coco/
-  val2017/
-  annotations/
-    instances_val2017.json
-```
-
-### 3. Run Week 1 — Data loading & visualization
-```matlab
-main_week1
-```
-
-### 4. Run Week 2 — Detection + tracking
-```matlab
-main_week2
-```
-
-### 5. Run Week 3 — Evaluation + dashboard
-```matlab
-main_week3
-```
-
----
-
-## Performance Dashboard
-
-The dashboard is auto-generated after Week 3 and saved to `results/dashboard.png`.
-
-It includes:
-- FPS over time (CPU vs GPU comparison)
-- Per-class Average Precision bar chart
-- Precision-Recall curves by class
-- Key metrics panel
-- FPS distribution histogram
-- Detections per frame
-
----
-
 ## GPU Acceleration
-
-To enable GPU (recommended):
-
-In `config.m`, set:
-```matlab
-cfg.useGPU = true;
-```
 
 | Mode | Avg FPS | Per Frame |
 |------|---------|-----------|
@@ -151,11 +106,11 @@ Tracked classes: `person`, `car`, `bicycle`, `motorbike`, `bus`, `truck`
 
 ## Author
 
-**Vaibhav** — Data Engineer & AI Developer  
+**Vaibhav Panda** — Data Engineer & AI Developer  
 Specializing in intelligent automation, LLMs, and scalable data pipelines.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/YOUR_PROFILE)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/YOUR_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav_Panda-blue?logo=linkedin)](https://www.linkedin.com/in/vaibhavpanda/)
+[![GitHub](https://img.shields.io/badge/GitHub-vaipan2081--stack-black?logo=github)](https://github.com/vaipan2081-stack)
 
 ---
 
